@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Ciclo For</title>
+    <style>
+        body{
+            background-color: aqua;
+            color: black;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: oblique;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>EJEMPLO DEL USO DE CICLO FOR</h1>
+        <hr>
+        <br>
+        <br>
+        <table border="5">
+            <th>Números</th><th>Valor Letra</th>
+            <tbody id="cuerpo">
+
+            </tbody>
+        </table>
+        <script>
+            var salida='';
+                var sum=0;
+                var contPar=0;
+                var contImp=0;
+                for(var i=1; i<=5; i++){
+                    sum+=i;  //instrucción Acomuladora  sum=sum+i;
+                    if(i%2==0){
+                        contPar++;
+                    }
+                    else{
+                        contImp++; // contImp= contImp+1;
+                    }
+                   salida+='<tr><td>'+i+'</td><td>'+letras(i)+'</td></tr>'; 
+                }
+                salida+='<tr><td>Cantidad Pares'+contPar+'</td><td>Vacio</td></tr>';
+                salida+='<tr><td>Cantidad Impares'+contImp+'</td><td>Vacio</td></tr>';
+                salida+='<tr><td>Suma de Numero'+sum+'</td><td>Vacio</td></tr>';
+                document.getElementById('cuerpo').innerHTML=salida;
+
+                function letras(num){
+                    switch (num){
+                        case 0:letra='CERO'; break;
+                        case 1:letra='UNO'; break;
+                        case 2:letra='DOS'; break;
+                        case 3:letra='TRES'; break;
+                        case 4:letra='CUATRO'; break;
+                        case 5:letra='CINCO'; break;
+                    }
+                    return letra;
+                }
+        </script>
+    </center>
+    
+</body>
+</html>
