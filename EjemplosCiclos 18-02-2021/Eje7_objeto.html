@@ -74,13 +74,14 @@
             pc : null,
             pv : null
         }
-        console.log(objArticulo);
+        
         function registrarVenta(){
             objArticulo.art=document.getElementById('art').value;
             objArticulo.und=document.getElementById('und').value;
             objArticulo.cant=document.getElementById('cant').value;
             objArticulo.pc=document.getElementById('pc').value;
             objArticulo.pv=document.getElementById('pv').value;
+            console.log(objArticulo);
             salida+='<tr><td>'+objArticulo.art+'</td><td>'+convUnd(objArticulo.und)+'</td><td>'+objArticulo.cant+'</td><td>'+objArticulo.pc+'</td><td>'+objArticulo.pv+'</td><td>'+totalVenta(objArticulo.pv,objArticulo.cant)+'</td></tr>';
             document.getElementById('cuerpo').innerHTML=salida;
             limpiarCajas();
