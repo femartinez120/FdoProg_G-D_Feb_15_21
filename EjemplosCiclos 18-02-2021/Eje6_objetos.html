@@ -66,7 +66,7 @@
         <h2>LISTADO DE ESTUDIANTES</h2>
         <br>
         <table border="5">
-            <th>Nombres</th><th>Apellidos</th><th>Nota 1</th><th>Nota 2</th><th>Nota 3</th><th>Nota Final</th><th>APROBADO/REPROBADO</th>
+            <th>Nombres</th><th>Apellidos</th><th>Nota 1</th><th>Nota 2</th><th>Nota 3</th><th>Nota Final</th><th>Aprobado/Reprobado</th><th>Valoración</th>
             <tbody id="cuerpo">
 
             </tbody>
@@ -84,7 +84,7 @@
             console.log(objEst);
             console.log(objEst.ape);// refeenciar propiedad del objeto la propiedad ape
             var nota=nf(objEst.n1,objEst.n2,objEst.n3);
-            salida +='<tr><td>'+objEst.nom+'</td><td>'+objEst.ape+'</td><td>'+objEst.n1+'</td><td>'+objEst.n2+'</td><td>'+objEst.n3+'</td><td>'+ nota+'</td><td><font color = "'+coloLetra(nota)+'">'+aprobReprob(nota)+'</font></td></tr>';
+            salida +='<tr><td>'+objEst.nom+'</td><td>'+objEst.ape+'</td><td>'+objEst.n1+'</td><td>'+objEst.n2+'</td><td>'+objEst.n3+'</td><td>'+ nota+'</td><td><font color = "'+coloLetra(nota)+'">'+aprobReprob(nota)+'</font></td><td>'+valorcion(nota) +'</td></tr>';
             document.getElementById('cuerpo').innerHTML=salida;
             limpiarCaja(); 
         }
@@ -113,6 +113,18 @@
             }
             else{
                 return "REPROBADO";
+            }
+        }
+        function valorcion(nota){
+            if(nota >=0){
+                if(nota < 1){
+                    return "INSUFICIENTE"
+                }
+                else{
+                    if(nota < 3){
+                        return "DEFICIENTE"
+                    }
+                }
             }
         }
     </script>
