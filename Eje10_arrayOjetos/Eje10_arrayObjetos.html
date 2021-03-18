@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Array Objetos</title>
+    <style>
+        body{
+            background-color: blanchedalmond;
+            color: black;
+            font-style:italic;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Ejemplo Manejo de Array de Objetos</h1>
+        <hr>
+        <br>
+        <table border="5">
+            <th>Descripción</th><th>Valor</th>
+            <tbody>
+                <tr>
+                    <td>Nombres</td>
+                    <td><input type="text" name="nom" id="nom" placeholder="Digite sus Nombres" autofocus ></td>
+                </tr>
+                <tr>
+                    <td>Apellidos</td>
+                    <td><input type="text" name="ape" id="ape" placeholder="Digite sus Apellidos"></td>
+                </tr>
+                <tr>
+                    <td>Nota 1</td>
+                    <td><input type="text" name="n1" id="n1" placeholder="Digite sus Nota 1"></td>
+                </tr>
+                <tr>
+                    <td>Nota 2</td>
+                    <td><input type="text" name="n2" id="n2" placeholder="Digite sus Nota 2"></td>
+                </tr>
+                <tr>
+                    <td>Nota 3</td>
+                    <td><input type="text" name="n3" id="n3" placeholder="Digite sus Nota 3"></td>
+                </tr>
+            </tbody>
+        </table>
+        <table border="5">
+            <tr><td>
+                <button onclick="guardar()">Guardar</button>
+            </td></tr>
+        </table>
+        <br>
+        <h2>Listado de Estudiantes</h2>
+        <table border="5">
+            <th>Nombres</th><th>Apellidos</th><th>Nota 1</th><th>Nota 2</th><th>Nota 3</th><th>Nota Final</th>
+            <tbody id="cuerpo"></tbody>
+        </table>
+    </center>
+    <script src="Eje10_arrayObjetos.js"></script>
+</body>
+</html>
