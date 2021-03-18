@@ -13,8 +13,9 @@ function guardar(){
     oEst.n1=document.getElementById('n1').value;
     oEst.n2=document.getElementById('n2').value;
     oEst.n3=document.getElementById('n3').value;
-    console.log(oEst);
-    myArrayEst.push(oEst);
+    let resultado = JSON.parse(JSON.stringify(oEst)); //convierte un estring de objetos  a Notación de Objetos JavaScript 
+    console.log(resultado);
+    myArrayEst.push(resultado);
     console.log(myArrayEst);
     limpiarCajas();
     listarEstudiante();
